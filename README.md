@@ -17,22 +17,25 @@ Take a screenshot of the output and copy the program and the output in your git 
 Push the output images and program in the git repository.
 ## Program:
 ```
+'''
+Developed by: LINGESWARAN K
+Reference number: 212222110022
+'''
 import pandas as pd
 from sklearn import linear_model
-df = pd.read_csv("carsemission.csv")
-X = df[['Weight', 'Volume']]
-y = df['CO2']
-regr = linear_model.LinearRegression()
-regr.fit(X, y)
-print('Coefficients:', regr.coef_)
+df=pd.read_csv("cars.csv")
+x=df[['Weight','Volume']]
+y=df['CO2']
+regr=linear_model.LinearRegression()
+regr.fit(x,y)
+print('Coefficients: ',regr.coef_)
 print('Intercept:',regr.intercept_)
-predictedCO2 = regr.predict([[3300, 1300]])
+predictedCO2=regr.predict([[3300,1300]])
 print('Predicted CO2 for the corresponding weight and volume',predictedCO2)
 
 ```
 ## Output:
-![image](https://github.com/Lingeswaran04/Multivariate-Linear-Regression/assets/119103865/82d2bd9d-3ede-4216-816b-d869bb069f96)
-
+![image](https://github.com/Lingeswaran04/Multivariate-Linear-Regression/assets/119103865/df5b302d-fa12-4050-9e4c-1414d1b44caf)
 
 ## Result
 Thus the multivariate linear regression is implemented and predicted the output using python program.
